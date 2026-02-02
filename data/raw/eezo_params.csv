@@ -1,0 +1,32 @@
+param_name,value,unit,source,note
+# 店舗連携パラメータ
+target_partner_stores_y1,10,店舗,戦略レポート,初年度目標
+target_partner_stores_y2,20,店舗,推定,2年目目標
+target_partner_stores_y3,30,店舗,推定,3年目目標
+monthly_qr_scans_per_store,100,回/月/店舗,推定,平均値
+# 転換率パラメータ
+cvr_qr_to_site,0.60,率,推定,QRスキャン→サイト訪問
+cvr_site_to_purchase,0.133,率,計算,サイト訪問→購入（全体CVR8%達成用）
+cvr_overall,0.08,率,戦略レポート,QR→購入の全体CVR
+cvr_benchmark_winery,0.087,率,SVB調査2021,ワイナリーテイスティングルーム
+cvr_benchmark_craft_beer,0.125,率,業界レポート,クラフトビールタップルーム中央値
+# 顧客単価パラメータ
+avg_order_value,8000,円,戦略レポート,初回購入
+repeat_order_value,10000,円,推定,リピート購入（単価UP傾向）
+gift_order_value,15000,円,推定,ギフト購入
+# リピート・LTV パラメータ
+repeat_rate_3m,0.25,率,戦略レポート目標,3ヶ月以内リピート率
+repeat_rate_6m,0.35,率,推定,6ヶ月以内リピート率
+repeat_rate_12m,0.40,率,推定,12ヶ月以内リピート率
+annual_purchase_frequency,2.5,回/年,推定,リピーター含む平均
+customer_lifetime_months,24,月,推定,EC顧客平均継続期間
+# コストパラメータ
+platform_monthly_fee,50000,円/月,Shopify想定,システム維持費
+digital_ad_budget,300000,円/月,初期設定,段階的に調整
+shipping_cost_avg,1200,円/件,ヤマト冷蔵,平均配送費
+packing_material_cost,300,円/件,推定,梱包資材
+payment_fee_rate,0.034,率,決済代行相場,クレジットカード手数料
+# 店舗インセンティブ
+store_commission_rate,0.15,率,戦略レポート,EC売上の15%
+store_setup_cost,50000,円/店舗,推定,QRコード設置・説明
+store_monthly_minimum,0,円/月/店舗,初期設定,月額最低保証なし
