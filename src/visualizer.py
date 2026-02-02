@@ -16,7 +16,17 @@ import matplotlib.font_manager as fm
 import seaborn as sns
 
 # 日本語フォント設定
-plt.rcParams['font.family'] = ['DejaVu Sans', 'Hiragino Sans', 'Yu Gothic', 'Meiryo', 'sans-serif']
+import matplotlib
+matplotlib.use('Agg')  # バックエンドを設定
+
+# Noto Sans CJK JPフォントを直接指定
+import os
+noto_font_path = '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
+if os.path.exists(noto_font_path):
+    fm.fontManager.addfont(noto_font_path)
+    plt.rcParams['font.family'] = ['Noto Sans CJK JP']
+else:
+    plt.rcParams['font.family'] = ['DejaVu Sans', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
 
